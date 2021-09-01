@@ -22,7 +22,7 @@ public void initalize()
 @Test
 public void testNotempty()
 {
-	assertTrue(validation.verifchaine("test"));
+	assertTrue(validation.verifchaine(""));
 	
 }
 @Test
@@ -34,13 +34,6 @@ assertTrue(validation.verifage(23));
 public void verifEmail()
 {
 assertTrue(validation.verifmail("test@gmail.com"));	
-
-}
-@Test
-public void verifconvert()
-{
-exception.expect(NumberFormatException.class);
-validation.conversible("21a");
 
 }
 }

@@ -1,12 +1,28 @@
 package com.example.demo.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import com.sun.istack.NotNull;
+
+@Entity
 public class User {
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
 	private int id;
+	@NotNull
 	private String nom;
+	@NotNull
 	private String prenom;
+	@NotNull
 	private String email;
+	@NotNull
 	private String password;
+	@NotNull
 	private int age;
+	@NotNull
 	private String grade;
 	public User(int id, String nom, String prenom, String email, String password, int age, String grade) {
 		this.id = id;
