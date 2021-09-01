@@ -18,18 +18,37 @@ public class ValidateUser implements UserInter {
 	public void conversible(String a) {
 		// TODO Auto-generated method stub
 
+Integer.parseInt(a);	
+
 	}
 
 	@Override
 	public boolean verifmdp(String password) {
 		// TODO Auto-generated method stub
-		return false;
+		return password.length()>5;
 	}
 
 	@Override
 	public boolean verifmail(String email) {
 		// TODO Auto-generated method stub
-		return false;
+		//test.gmail@ **
+		//test@gmail.com 
+		//test.com
+		
+		if(email.contains("@"))
+		{
+if(email.indexOf("@")==email.length()-1)
+{
+	return false;
+}
+else 
+	return true;
+		}
+		else 
+			return false;
+
+	
 	}
+	
 
 }
